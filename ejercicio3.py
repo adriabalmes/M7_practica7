@@ -1,19 +1,18 @@
 import csv
 
 #Definimos la function createCSV
+import row
+
 def function_createCSV():
 
     # abrir archivo csv en modo escritura
-    import row as row
-    f = open('./file.csv', 'w')
+    with open('./file.csv', 'w') as file:
     # Creamos el csv.writer
-    writer = csv.writer(f)
-
+        writer = csv.writer(file)
     # Creamos el row de csv
-    writer.writerow(row)
-
+        writer.writerow(row)
     # cerramos el archivo
-    f.close()
+        file.close()
 
 def function_writeCSV():
 
@@ -27,9 +26,9 @@ def function_writeCSV():
     ]
     #data = ['X', 'X', 'X']
     #Escribimos sobre el archivo CSV
-    with open('file.csv', 'w', encoding='UTF8') as f:
+    with open('file.csv', 'w', encoding='UTF8') as file:
 
-        writer = csv.writer(f)
+        writer = csv.writer(file)
 
         # Escribimos la fila
         writer.writerow(header)
@@ -37,7 +36,7 @@ def function_writeCSV():
         # Escribimos los datos
         writer.writerow(data)
 
-
+    file.close()
 def function_readerCSV():
 
     with open('file.csv', newline='', encoding='utf-8') as f:
