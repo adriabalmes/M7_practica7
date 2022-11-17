@@ -14,5 +14,3 @@ def imprimeLibros2 ():
     with open ("jsonFile.json", 'r') as file:
         libros = json.load(file)
     print(libros)
-
-imprimeLibros()
