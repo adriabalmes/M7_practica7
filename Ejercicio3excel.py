@@ -3,8 +3,7 @@ import openpyxl
 from openpyxl import load_workbook
 
 #creamos la funcion
-from openpyxl.utils import dataframe
-
+from openpyxl.utils.dataframe import dataframe
 
 def function_createxcel():
     #Creamos el archivo
